@@ -62,8 +62,8 @@ function calculateAndDisplay() {
     let totalAdditionalCheckouts = purchasableItems * avgCheckouts;
 
     // Display the number of purchasable items and total additional checkouts, and make them visible
-    document.getElementById('purchasableItems').textContent = `With the calculated profit, you can purchase approximately ${purchasableItems} items.`;
-    document.getElementById('totalAdditionalCheckouts').textContent = `This equates to an additional ${totalAdditionalCheckouts} checkouts.`;
+    document.getElementById('purchasableItems').innerHTML = `With the calculated profit, you can purchase approximately <u>${purchasableItems}</u> items.`;
+    document.getElementById('totalAdditionalCheckouts').innerHTML = `This equates to an additional <u>${totalAdditionalCheckouts}</u> checkouts.`;
     document.getElementById('purchasableItems').style.display = "block";
     document.getElementById('totalAdditionalCheckouts').style.display = "block";
 
