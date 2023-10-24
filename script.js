@@ -13,10 +13,17 @@ function calculateAndDisplay() {
     let pricePerCheckout = parseFloat(document.getElementById('pricePerCheckout').value);
     let numPatrons = parseFloat(document.getElementById('numPatrons').value);
     let avgTitles = parseFloat(document.getElementById('avgTitles').value);
+    let avgItemCost = parseFloat(document.getElementById('avgItemCost').value);
 
     let revenue = numPatrons * 50;
     let cost = pricePerCheckout * avgTitles * numPatrons;
     let profit = revenue - cost;
+
+    // Calculate how many items can be purchased with the profit
+    let purchasableItems = Math.floor(profit / avgItemCost);
+
+    // Display the number of purchasable items somewhere in your UI
+    document.getElementById('purchasableItems').textContent = `With the calculated profit, you can purchase approximately ${purchasableItems} items.`;
 
     displayChart(revenue, cost, profit);
 }
