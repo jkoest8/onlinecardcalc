@@ -10,10 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function calculateAndDisplay() {
-    let pricePerCheckout = parseFloat(document.getElementById('pricePerCheckout').value);
+    let avgItemCost = parseFloat(document.getElementById('avgItemCost').value);
+    let avgCheckouts = parseFloat(document.getElementById('avgCheckouts').value);
     let numPatrons = parseFloat(document.getElementById('numPatrons').value);
     let avgTitles = parseFloat(document.getElementById('avgTitles').value);
-    let avgItemCost = parseFloat(document.getElementById('avgItemCost').value);
+
+    // Deriving the price per checkout based on the average item cost and average checkouts
+    let pricePerCheckout = avgItemCost / avgCheckouts;
 
     let revenue = numPatrons * 50;
     let cost = pricePerCheckout * avgTitles * numPatrons;
