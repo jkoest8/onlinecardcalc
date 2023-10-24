@@ -65,7 +65,7 @@ function calculateAndDisplay() {
     let avgCostPerCheckout = avgItemCost / avgCheckouts;
     
     // Display average cost per checkout
-    document.getElementById('avgCostPerCheckout').textContent = `Average cost per checkout is: $${avgCostPerCheckout.toFixed(2)}.`;
+    document.getElementById('avgCostPerCheckout').innerHTML = `Average cost per checkout is: <u>$${avgCostPerCheckout.toFixed(2)}</u>.`;
 
 
     // Display the number of purchasable items and total additional checkouts, and make them visible
