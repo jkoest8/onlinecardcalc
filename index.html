@@ -10,10 +10,12 @@
     <div class="container">
         <h1>Library Profitability Calculator</h1>
         <form id="calcForm">
-            <label>
-                Price per Checkout of Audiobook/Ebook ($) <br> (Average Cost Divided by Number of Licensed Checkouts):
-                <input type="number" id="pricePerCheckout" step="0.01" required>
-            </label>
+             <label>
+                Average Cost of Audiobook/Ebook ($):</label>
+                <input type="number" id="avgItemCost" value="70" min="0">
+            <label for="avgNumCheckouts">Average Number of Licensed Checkouts per Purchase:</label>
+                <input type="number" id="avgNumCheckouts" required>
+                
             <label>
                 Number of $50/Year Patrons:
                 <input type="number" id="numPatrons" value="1000" min="0" required>
@@ -22,9 +24,7 @@
                 Average Titles Borrowed per Patron per Year:
                 <input type="number" id="avgTitles" required>
             </label>
-            <label>
-                Average Cost of Audiobook/Ebook ($):</label>
-                <input type="number" id="avgItemCost" value="70" min="0">
+          
             <button type="submit">Calculate</button>
             
 
