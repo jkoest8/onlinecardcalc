@@ -22,8 +22,9 @@ function calculateAndDisplay() {
     // Calculate how many items can be purchased with the profit
     let purchasableItems = Math.floor(profit / avgItemCost);
 
-    // Display the number of purchasable items somewhere in your UI
+    // Display the number of purchasable items and make it visible
     document.getElementById('purchasableItems').textContent = `With the calculated profit, you can purchase approximately ${purchasableItems} items.`;
+    document.getElementById('purchasableItems').style.display = "block";
 
     displayChart(revenue, cost, profit);
 }
